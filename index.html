@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Спорстмены</h1>
+<p>Количественные данные:</p>
+<ul>
+	<li><strong>Пловцы:</strong>{{ num_books }}</li>
+	<li><strong>Количество спортсменов:</strong>{{ num_instances }}</li>
+	<li><strong>Страны:</strong>{{ num_authors }}</li>
+</ul>
+<div class="btn-group" role="group">
+	<button 
+	type="submit" 
+	onclick="window.location.href='add-author';" class="btn btn-secondary">New author</button>
+	<button type="submit" class="btn btn-secondary"
+	onclick="window.location.href='add-book';">New book</button>
+	<button type="submit" class="btn btn-secondary"
+	onclick="window.location.href='#';">New genre</button>
+	<button type="submit" class="btn btn-secondary" 
+	onclick="window.location.href='#';">New book instance</button>
+</div>
+
+<!-- {% for author in authors %}
+	<h1>{{author.name}}</h1>
+{% endfor %}	 -->
+
+{% endblock %}
